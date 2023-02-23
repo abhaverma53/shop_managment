@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Managers</h1>
+<%= link_to "New manager", new_manager_path, class: "btn btn-outline-primary" %>
+
+
+<div id="managers">
+  <% @managers.each do |manager| %>
+    <%= render manager %>
+    <p>
+      <%= link_to "Show this manager", manager, class: "btn btn-warning" %>
+    </p>
+  <% end %>
+</div>
+
